@@ -28,7 +28,7 @@
 <dependency>
     <groupId>com.zc.smartcity</groupId>
     <artifactId>spring-boot-starter-redis</artifactId>
-    <version>1.1-RELEASE</version>
+    <version>1.0-RELEASE</version>
 </dependency>
 
 ```
