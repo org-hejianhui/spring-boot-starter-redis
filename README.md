@@ -1,5 +1,5 @@
 # spring-boot-starter-redis
-基于Jedis的自定义redis-starter组件，使得项目使用Redis变得异常简单，支持对单机Redis和Redis Cluster，支持spring boot，和spirng mvc等spring相关项目
+基于Jedis的自定义redis-starter组件，使得项目使用Redis变得异常简单，支持对单机Redis和Redis Cluster，支持spring boot，和spirng mvc等spring相关项目 [https://github.com/org-hejianhui/spring-boot-starter-redis](https://github.com/org-hejianhui/spring-boot-starter-redis)
 
 # 特性
 
@@ -137,7 +137,7 @@ private IRedis iRedisClusterHA;
 
 # 数据监控
 <p align="center">
-    <img src="https://github.com/org-hejianhui/spring-boot-redis-starter/blob/master/src/test/resources/monitor.png?raw=true" width="800" />
+    <img src="https://github.com/org-hejianhui/spring-boot-starter-redis/blob/master/src/test/resources/monitor.png?raw=true" width="800" />
 </p>
 
 
@@ -145,8 +145,8 @@ private IRedis iRedisClusterHA;
 工程test模块下，为Redis 客户端的测试模块。可以快速体验客户端API使用的效果。
 
 # 使用登记
-如果这个项目解决了你的实际问题，可在[https://github.com/org-hejianhui/spring-boot-redis-starter/issues/](https://github.com/org-hejianhui/spring-boot-redis-starter/issues/)登记下，如果节省了你的研发时间，也愿意支持下的话，可点击下方【捐助】请作者喝杯咖啡，也是非常感谢！
+如果这个项目解决了你的实际问题，可在[https://github.com/org-hejianhui/spring-boot-starter-redis/issues/](https://github.com/org-hejianhui/spring-boot-starter-redis/issues/)登记下，如果节省了你的研发时间，也愿意支持下的话，可点击下方【捐助】请作者喝杯咖啡，也是非常感谢！
 
 <p align="center">
-    <img src="https://github.com/org-hejianhui/spring-boot-redis-starter/blob/master/src/test/resources/mycat.JPG?raw=true" width="200" />
+    <img src="https://github.com/org-hejianhui/spring-boot-starter-redis/blob/master/src/test/resources/mycat.JPG?raw=true" width="200" />
 </p>
