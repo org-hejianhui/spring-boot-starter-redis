@@ -18,7 +18,7 @@ import java.util.List;
  * 
  * zookeeper manage
  * 
- * @author fanxubiao
+ * @author hejianhui
  *
  */
 public class CuratorZookeeper {
@@ -30,11 +30,7 @@ public class CuratorZookeeper {
 	private CuratorFramework zkTools;
 	
 	private GedisGroups values;
-	
-	
-	
-	
-	
+
 	
 	public CuratorZookeeper(String host,GedisGroups values){
 		

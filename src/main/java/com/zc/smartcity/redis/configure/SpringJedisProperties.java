@@ -6,6 +6,7 @@ import org.springframework.context.annotation.PropertySource;
 import redis.clients.jedis.JedisPool;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @program: redis-spring-boot-starter
@@ -20,9 +21,6 @@ public class SpringJedisProperties {
 
     static final String REDIS_PREFIX = "spring.jedis";
 
-    private String business;
-
-    private String zkHostPort;
     /**
      * Jedis connection pool
      **/
@@ -64,4 +62,16 @@ public class SpringJedisProperties {
      * Authentication password
      **/
     private String auth;
+    /**
+     * business type
+     */
+    private String business;
+    /**
+     * zk
+     */
+    private String zkHostPort;
+    /**
+     * monitor setting
+     */
+    private Map<?,?> monitor;
 }

@@ -26,6 +26,7 @@ import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.JedisPoolConfig;
 
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -37,7 +38,10 @@ import java.util.Set;
 @Configuration
 @ConditionalOnClass(value = {
         SpringJedisStandAloneService.class,
-        SpringJedisClusterService.class
+        SpringJedisClusterService.class,
+        RedisConnectionFactory.class,
+        RedisClusterConnectionFactory.class,
+        RedisClusterConnectionVHFactory.class
 })
 @EnableConfigurationProperties(SpringJedisProperties.class)
 public class SpringJedisAutoConfigure {
@@ -103,12 +107,10 @@ public class SpringJedisAutoConfigure {
         return new SpringJedisClusterService(nodes, config);
     }
 
-
-
     /**
-     * 注册单机实例Bean
+     * 注册单机Redis连接工厂Bean
      *
-     * @return 返回单机实例
+     * @return 返回单机工厂实例
      * @author hejianhui
      * @date 2019/4/7
      */
@@ -120,10 +122,11 @@ public class SpringJedisAutoConfigure {
         //放入连接池
         return new RedisConnectionFactory(new SpringJedisStandAloneConfig(properties));
     }
+
     /**
-     * 注册单机实例Bean
+     * 注册集群Redis连接工厂Bean
      *
-     * @return 返回单机实例
+     * @return 返回集群工厂实例
      * @author hejianhui
      * @date 2019/4/7
      */
@@ -137,9 +140,9 @@ public class SpringJedisAutoConfigure {
     }
 
     /**
-     * 注册集群实例Bean
+     * 注册HA集群Redis连接工厂Bean
      *
-     * @return 返回集群实例
+     * @return 返回集群可扩容工厂实例
      * @author hejianhui
      * @date 2019/4/7
      */
@@ -148,9 +151,16 @@ public class SpringJedisAutoConfigure {
     @ConditionalOnProperty(name = "spring.jedis.haCluster.enabled", havingValue = "true")
     @ConditionalOnJava(value = JavaVersion.EIGHT, range = ConditionalOnJava.Range.EQUAL_OR_NEWER)
     RedisClusterConnectionVHFactory redisClusterConnectionVHFactory() {
-         return new RedisClusterConnectionVHFactory(properties);
+        return new RedisClusterConnectionVHFactory(properties);
     }
 
+    /**
+     * 注册单机Redis服务接口Bean
+     *
+     * @return 返回单机实例
+     * @author hejianhui
+     * @date 2019/4/7
+     */
     @Bean("iRedis")
     @ConditionalOnMissingBean
     @ConditionalOnClass({ RedisConnectionFactory.class })
@@ -160,6 +170,13 @@ public class SpringJedisAutoConfigure {
         return new RedisImpl();
     }
 
+    /**
+     * 注册集群Redis服务接口Bean
+     *
+     * @return 返回集群实例
+     * @author hejianhui
+     * @date 2019/4/7
+     */
     @Bean("iRedisCluster")
     @ConditionalOnMissingBean
     @ConditionalOnClass({ RedisClusterConnectionFactory.class })
@@ -169,6 +186,13 @@ public class SpringJedisAutoConfigure {
         return new RedisClusterImpl();
     }
 
+    /**
+     * 注册HA集群Redis服务接口Bean
+     *
+     * @return 返回HA集群实例
+     * @author hejianhui
+     * @date 2019/4/7
+     */
     @Bean("iRedisClusterHA")
     @ConditionalOnMissingBean
     @ConditionalOnClass({ RedisClusterConnectionVHFactory.class })
@@ -178,6 +202,13 @@ public class SpringJedisAutoConfigure {
         return new RedisClusterImpl();
     }
 
+    /**
+     * 注册监控AOP切面Bean
+     *
+     * @return 返回监控AOP切面实例
+     * @author hejianhui
+     * @date 2019/4/7
+     */
     @Bean
     @ConditionalOnMissingBean
     @ConditionalOnClass(value = { RedisImpl.class,RedisClusterImpl.class })
@@ -187,6 +218,13 @@ public class SpringJedisAutoConfigure {
         return new MonitorAspect();
     }
 
+    /**
+     * 注册监控服务Bean
+     *
+     * @return 返回监控服务实例
+     * @author hejianhui
+     * @date 2019/4/7
+     */
     @Bean
     @ConditionalOnMissingBean
     @ConditionalOnClass(value = { RedisImpl.class,RedisClusterImpl.class })
@@ -195,7 +233,8 @@ public class SpringJedisAutoConfigure {
     MonitorService monitorService(){
         FalconProtocol protocol = new FalconProtocol();
         protocol.setEndpoint("redis-cluster");
-        return new MonitorService(protocol,"http://127.0.0.1:8080/springboot/monitor");
+        Map<String,String> map = (Map<String, String>) properties.getMonitor();
+        return new MonitorService(protocol,map.get("url"));
     }
 
 }

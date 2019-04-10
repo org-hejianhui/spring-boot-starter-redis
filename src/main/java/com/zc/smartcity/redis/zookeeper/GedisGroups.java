@@ -12,9 +12,7 @@ import java.util.List;
  * 
  * flasher server group
  * 
- * 
- * 
- * @author fanxubiao
+ * @author hejianhui
  *
  */
 public class GedisGroups {

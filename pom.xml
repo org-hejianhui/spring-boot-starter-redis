@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>spring-boot-start-redis</artifactId>
+    <artifactId>spring-boot-starter-redis</artifactId>
     <version>1.0-RELEASE</version>
 
     <properties>

@@ -7,7 +7,7 @@ package com.zc.smartcity.redis.enums;
  *
  * @author: hejianhui
  * @create: 2019-04-03 17:14
- * @see MonitorPushTypeEnum
+ * @see MonitorTransferTypeEnum
  * @since JDK1.8
  */
 public enum MonitorTransferTypeEnum {
