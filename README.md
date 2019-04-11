@@ -116,7 +116,7 @@ private IRedis iRedisClusterHA;
        @Test
         public void testKey(){
           for (int i=0;i<100;i++) {
-              iRedisClusterHA.set("trade", "hejianhui" + i, "20181214" + i);
+              iRedisClusterHA.set("trade", "hejianhui" + i, "20190409" + i);
              System.out.println(iRedis.get("trade","hejianhui"+i));
              try {
                 Thread.sleep(2000);
