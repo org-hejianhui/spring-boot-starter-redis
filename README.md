@@ -17,7 +17,7 @@
 
 5、	异步监控调用数据，支持异步上报
 
-6、	方便管理有效的区分业务系统。会员（memmber） 商品（goods）
+6、	方便管理有效的区分业务系统。例如：会员（memmber） 商品（goods）
 
 7、	支持Falcon协议. 监控系统
 
@@ -42,6 +42,7 @@
 ```java
 spring:
   jedis:
+    # 业务标记
     business: 1
     # 公共配置选项
     maxWaitMillis: 30000
