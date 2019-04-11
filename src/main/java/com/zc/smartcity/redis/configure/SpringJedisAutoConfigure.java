@@ -62,7 +62,7 @@ public class SpringJedisAutoConfigure {
      * 注册单机实例Bean
      *
      * @return 返回单机实例
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/7
      */
     @Bean
@@ -78,7 +78,7 @@ public class SpringJedisAutoConfigure {
      * 注册集群实例Bean
      *
      * @return 返回集群实例
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/7
      */
     @Bean
@@ -111,7 +111,7 @@ public class SpringJedisAutoConfigure {
      * 注册单机Redis连接工厂Bean
      *
      * @return 返回单机工厂实例
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/7
      */
     @Bean
@@ -127,7 +127,7 @@ public class SpringJedisAutoConfigure {
      * 注册集群Redis连接工厂Bean
      *
      * @return 返回集群工厂实例
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/7
      */
     @Bean
@@ -143,7 +143,7 @@ public class SpringJedisAutoConfigure {
      * 注册HA集群Redis连接工厂Bean
      *
      * @return 返回集群可扩容工厂实例
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/7
      */
     @Bean
@@ -158,7 +158,7 @@ public class SpringJedisAutoConfigure {
      * 注册单机Redis服务接口Bean
      *
      * @return 返回单机实例
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/7
      */
     @Bean("iRedis")
@@ -174,7 +174,7 @@ public class SpringJedisAutoConfigure {
      * 注册集群Redis服务接口Bean
      *
      * @return 返回集群实例
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/7
      */
     @Bean("iRedisCluster")
@@ -190,7 +190,7 @@ public class SpringJedisAutoConfigure {
      * 注册HA集群Redis服务接口Bean
      *
      * @return 返回HA集群实例
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/7
      */
     @Bean("iRedisClusterHA")
@@ -206,7 +206,7 @@ public class SpringJedisAutoConfigure {
      * 注册监控AOP切面Bean
      *
      * @return 返回监控AOP切面实例
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/7
      */
     @Bean
@@ -222,7 +222,7 @@ public class SpringJedisAutoConfigure {
      * 注册监控服务Bean
      *
      * @return 返回监控服务实例
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/7
      */
     @Bean

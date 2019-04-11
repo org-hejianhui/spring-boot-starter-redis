@@ -20,7 +20,7 @@ public class RedisConnectionFactory implements IRedisConnection {
     /**
      * 关闭服务时，自动销毁
      *
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/17
      */
     @Override
@@ -38,7 +38,7 @@ public class RedisConnectionFactory implements IRedisConnection {
      * 默认选择db0库
      *
      * @return Jedis
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/17
      */
     public Jedis getJedis() {
@@ -50,7 +50,7 @@ public class RedisConnectionFactory implements IRedisConnection {
      *
      * @param index db库标记
      * @return Jedis
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/17
      */
     public Jedis getJedis(int index) {
@@ -63,7 +63,7 @@ public class RedisConnectionFactory implements IRedisConnection {
      * 返回连接池
      *
      * @param jedis 连接
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/17
      */
     public void returnRedis(Jedis jedis) {

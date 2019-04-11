@@ -50,7 +50,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param callback 回调接口处理
      * @param args     数组参数
      * @return T 泛型
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/17
      */
     private <T> T execute(RedisCallback<T> callback, Object... args) {
@@ -83,7 +83,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * index 实例index
      *
      * @param index 数据库位置
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:38 2019/4/8
      */
     public void select(int index) {
@@ -113,7 +113,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param index 数据库位置
      * @param key   key标识
      * @return Boolean 返回true或false
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:26 2019/4/8
      */
     public Boolean exists(int index,String business, String key) {
@@ -129,7 +129,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param mapKey       key标识
      * @param attributeKey 成员字段
      * @return Boolean 返回true或false
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:26 2019/4/8
      */
     public Boolean hexists(int index, String business, String mapKey, String attributeKey) {
@@ -145,7 +145,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param index 数据库位置
      * @param field 成员字段
      * @return String
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:26 2019/4/8
      */
     public String hget(int index,String business, String key, String field) {
@@ -161,7 +161,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param index 数据库位置
      * @param key   key标识
      * @return Map 获取在哈希表中指定 key 的所有字段和值
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:26 2019/4/8
      */
     public Map<String, String> hgetAll(int index, String business, String key) {
@@ -177,7 +177,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param mapKey       key标识
      * @param attributeKey 成员字段
      * @return long 受影响行数
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:26 2019/4/8
      */
     public Long hdel(int index, String business, String mapKey, String attributeKey) {
@@ -195,7 +195,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param field 成员字段
      * @param value 值
      * @return 返回影响行
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:26 2019/4/8
      */
     public Long hset(int index, String business, String key, String field, String value) {
@@ -212,7 +212,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param index 数据库位置
      * @param key   key标识
      * @return 返回值
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:26 2019/4/8
      */
     public String get(int index, String business, String key) {
@@ -228,7 +228,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param key     key标识
      * @param seconds 过期时间
      * @return 返回1设置 0未设置
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:26 2019/4/8
      */
     public Long expire(int index, String business, String key, int seconds) {
@@ -244,7 +244,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param index 数据库位置
      * @param key   key标识
      * @return byte 二进制
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:26 2019/4/8
      */
     public byte[] getByte(int index, String business, String key) {
@@ -260,7 +260,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param key   key标识
      * @param value 值
      * @return 返回状态码 OK
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public String set(int index, String business, String key, String value) {
@@ -277,7 +277,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param key   key标识
      * @param value 值
      * @return 返回状态码 OK
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public String set(int index, String business, String key, byte[] value) {
@@ -295,7 +295,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param value   值
      * @param seconds 过期时间
      * @return 返回状态码 OK
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public String setex(int index, String business, String key, String value, int seconds) {
@@ -313,7 +313,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param key     key标识
      * @param value   值
      * @param seconds 过期时间
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public String setex(int index, String business, String key, byte[] value, int seconds) {
@@ -328,7 +328,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * 批量set新增
      *
      * @param index 数据库位置
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public void setPipeLine(int index, String business, List<RedisKVPO> list) {
@@ -351,7 +351,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param index 数据库位置
      * @param key   key标识
      * @return 返回删除影响行数
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public Long del(int index, String business, String key) {
@@ -366,7 +366,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param index 数据库位置
      * @param key   key标识
      * @return 返回集合长度
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public Long llen(int index, String business, String key) {
@@ -382,7 +382,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param key   key标识
      * @param value 值
      * @return 返回整个元素的数量
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public Long lpush(int index, String business, String key, String value) {
@@ -397,7 +397,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      *
      * @param index 数据库位置
      * @param key   key标识
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public void lpushPipeLine(int index, String business, String key, List<String> values) {
@@ -419,7 +419,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param start 开始
      * @param end   截至
      * @return List集合
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public List<String> lrange(int index, String business, String key, long start, long end) {
@@ -437,7 +437,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param index 数据库位置
      * @param key   key标识
      * @return 返回自增值
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public Long incr(int index, String business, String key) {
@@ -453,7 +453,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param key   key标识
      * @param value 值
      * @return 返回插入影响行数
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public Long sadd(int index, String business, String key, String value) {
@@ -469,7 +469,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param index 数据库位置
      * @param key   key标识
      * @return Set集合
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public Set<String> smembers(int index, String business, String key) {
@@ -484,7 +484,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param index 数据库位置
      * @param key   key标识
      * @return List列表
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:11 2019/4/8
      */
     public List<String> brpop(int index, String business, String key) {
@@ -500,7 +500,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param key   key标识
      * @param field 成员字段
      * @param value 自增步长
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:26 2019/4/8
      */
     public Long hincrby(int index, String business, String key, String field, long value) {
@@ -518,7 +518,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param key   key标识
      * @param value 自增步长
      * @return String 返回旧值
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:26 2019/4/8
      */
     public Long incrBy(int index, String business, String key, long value) {
@@ -535,7 +535,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * @param key   key标识
      * @param value 自减步长
      * @return String 返回旧值
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 10:26 2019/4/8
      */
     public Long decrBy(int index, String business, String key, long value) {
@@ -549,7 +549,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
     /**
      * 关闭服务时，自动销毁
      *
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/17
      */
     @Override
@@ -561,7 +561,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * 默认选择db0库
      *
      * @return Jedis
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/17
      */
     private Jedis getRedis() {
@@ -573,7 +573,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      *
      * @param index db库标记
      * @return Jedis
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/17
      */
     private Jedis getRedis(int index) {
@@ -586,7 +586,7 @@ public class SpringJedisStandAloneService implements DisposableBean{
      * 返回连接池
      *
      * @param jedis 连接
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/17
      */
     private void returnRedis(Jedis jedis) {

@@ -35,7 +35,7 @@ public class SpringJedisStandAloneConfig extends JedisPoolConfig {
      * 构造处理
      *
      * @param properties 配置信息
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/7
      */
     public SpringJedisStandAloneConfig(SpringJedisProperties properties) {
@@ -48,7 +48,7 @@ public class SpringJedisStandAloneConfig extends JedisPoolConfig {
      * 初始化
      *
      * @param properties 配置信息
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/7
      */
     private void init(SpringJedisProperties properties) {
@@ -87,7 +87,7 @@ public class SpringJedisStandAloneConfig extends JedisPoolConfig {
      * 验证是否连接正常
      *
      * @return boolean
-     * @author hejianhui
+     * @author org_hejianhui@163.com
      * @date 2019/4/7
      */
     private boolean isConnected() {

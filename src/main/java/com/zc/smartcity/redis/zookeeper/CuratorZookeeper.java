@@ -18,7 +18,7 @@ import java.util.List;
  * 
  * zookeeper manage
  * 
- * @author hejianhui
+ * @author org_hejianhui@163.com
  *
  */
 public class CuratorZookeeper {
