@@ -27,12 +27,12 @@
 > spring boot项目接入
 
 
- 1.添加redis starter组件依赖，目前还没上传到公共仓库，需要自己下源码build
+ 1.添加redis starter组件依赖，~~目前还没上传到公共仓库，需要自己下源码build~~ 直接依赖下面即可使用
 ```
 <dependency>
-    <groupId>com.zc.smartcity</groupId>
-    <artifactId>spring-boot-starter-redis</artifactId>
-    <version>1.0-RELEASE</version>
+  <groupId>com.github.org-hejianhui</groupId>
+  <artifactId>spring-boot-starter-redis</artifactId>
+  <version>1.0-RELEASE</version>
 </dependency>
 
 ```
